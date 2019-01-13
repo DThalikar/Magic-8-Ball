@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="HelveticaNeueLights.ttc">
-            <string>HelveticaNeue-Thin</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -23,33 +18,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Ask Me Anything" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ykw-ua-bGA">
-                                <rect key="frame" x="77" y="87" width="210" height="36"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqp-WD-fYp">
-                                <rect key="frame" x="164" y="423" width="47" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
-                                <state key="normal" title="Ask">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="askButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oAp-Jv-Kco"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ball1" translatesAutoresizingMaskIntoConstraints="NO" id="TCw-tc-DXe">
-                                <rect key="frame" x="62" y="189" width="240" height="205"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ball1" translatesAutoresizingMaskIntoConstraints="NO" id="TCw-tc-DXe">
+                                <rect key="frame" x="67.5" y="231" width="240" height="205"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Lb5-77-VmM"/>
+                                    <constraint firstAttribute="height" constant="205" id="kcf-wV-ZQH"/>
+                                </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dNr-pP-e24" userLabel="Title">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="186"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask Me Anything" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ykw-ua-bGA">
+                                        <rect key="frame" x="82.5" y="75" width="210" height="36"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Ykw-ua-bGA" firstAttribute="centerY" secondItem="dNr-pP-e24" secondAttribute="centerY" id="0ey-Cf-O8a"/>
+                                    <constraint firstItem="Ykw-ua-bGA" firstAttribute="centerX" secondItem="dNr-pP-e24" secondAttribute="centerX" id="5tv-vQ-6pV"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ahu-9A-auV" userLabel="Ask Button">
+                                <rect key="frame" x="0.0" y="483" width="375" height="184"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqp-WD-fYp">
+                                        <rect key="frame" x="164" y="68" width="47" height="48"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
+                                        <state key="normal" title="Ask">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="askButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oAp-Jv-Kco"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="gqp-WD-fYp" firstAttribute="centerX" secondItem="ahu-9A-auV" secondAttribute="centerX" id="ujy-f6-CjY"/>
+                                    <constraint firstItem="gqp-WD-fYp" firstAttribute="centerY" secondItem="ahu-9A-auV" secondAttribute="centerY" id="zA4-4I-c9w"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.30211718320605063" green="0.6593604977032359" blue="0.74440831218274117" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ykw-ua-bGA" secondAttribute="trailing" constant="77" id="5c6-GT-AGd"/>
-                            <constraint firstItem="Ykw-ua-bGA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="67" id="P6a-Xa-nb5"/>
-                            <constraint firstItem="Ykw-ua-bGA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="77" id="yXD-UB-EpJ"/>
+                            <constraint firstItem="ahu-9A-auV" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="037-Bv-OVR"/>
+                            <constraint firstItem="ahu-9A-auV" firstAttribute="top" secondItem="TCw-tc-DXe" secondAttribute="bottom" constant="47" id="0sM-rh-VQ7"/>
+                            <constraint firstItem="TCw-tc-DXe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="33M-Re-mOJ"/>
+                            <constraint firstItem="TCw-tc-DXe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="39C-9O-Zn4"/>
+                            <constraint firstItem="TCw-tc-DXe" firstAttribute="top" secondItem="dNr-pP-e24" secondAttribute="bottom" constant="45" id="9rM-P3-hdN"/>
+                            <constraint firstItem="ahu-9A-auV" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="CIC-Vs-MSX"/>
+                            <constraint firstItem="dNr-pP-e24" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="DYk-Er-NSg"/>
+                            <constraint firstItem="dNr-pP-e24" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="eH6-cD-izm"/>
+                            <constraint firstItem="ahu-9A-auV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="n48-ZJ-vQh"/>
+                            <constraint firstItem="dNr-pP-e24" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qIW-IN-cmV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
